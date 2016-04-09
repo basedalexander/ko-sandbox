@@ -16,7 +16,11 @@
                     </tr>
                 </thead>
                 <tbody data-bind="foreach: catalog">
-                    <tr data-bind="style: { 'font-weight': MediaType === 'Book' ? 'bold' : 'normal' }, css: { digital: $.inArray(MediaType, ['CD', 'DVD', 'Game']) > -1 }">
+                    <tr
+                        data-bind="
+                                   style: { 'font-weight': MediaType === 'Book' ? 'bold' : 'normal' },
+                                   css: { 'digital': $.inArray(MediaType, ['CD', 'DVD', 'Game']) > -1 }
+                                  ">
                         <td data-bind="text: MediaType"></td>
                         <td data-bind="text: Name, attr: { title: ISBN }"></td>
                     </tr>
@@ -24,8 +28,8 @@
             </table>
         </div>
     </div>
-    <script src="js/jquery-2.1.4.min.js"></script>
-    <script src="js/knockout-3.3.0.js"></script>
+    <script src="vendor/jquery-2.1.4.min.js"></script>
+    <script src="vendor/knockout-3.3.0.js"></script>
     <script src="js/services/dataContext.js"></script>
     <script src="js/models/Media.js"></script>
     <script src="js/viewModels/DefaultViewModel.js"></script>

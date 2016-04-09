@@ -6,7 +6,7 @@ app.dataContext = (function ($) {
 
   function getCatalog (callback) {
     if ($.isFunction(callback)) {
-      $.getJSON('json/Catalog.json', function (data) {
+      $.getJSON('json/catalog.json', function (data) {
         console.log(data.Catalog);
         callback(data.Catalog);
       });
